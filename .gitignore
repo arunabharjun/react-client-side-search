@@ -2,7 +2,7 @@
 
 # others
 React-client-side-search.code-workspace
-*.code-workspace
+*.code-workspace 
 
 # dependencies
 /node_modules
