@@ -5,7 +5,7 @@ export const search = (keyword = '', data = []) => {
 	const res = [];
 
 	/**
-     * Preprocess keyword to looase all white spaces
+     * Preprocess keyword to remove all white spaces
      * and convert to all lower cases
      */
 	const searchKey = preProcess(keyword);

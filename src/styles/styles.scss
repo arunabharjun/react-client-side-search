@@ -1,4 +1,45 @@
 html,
 body {
 	overflow-x: hidden;
+	justify-content: center;
+	display: flex;
+}
+
+.data-card-active {
+	background-color: rgba($color: #fffedc, $alpha: 1.0);
+}
+
+.container {
+	padding: 10px;
+}
+
+.search-container {
+	overflow: hidden;
+	outline: none;
+	width: 100%;
+	form {
+		width: 100%;
+		input {
+			width: 100%;
+			outline: none;
+		}
+	}
+	.results-container {
+		max-height: 300px;
+		overflow-y: scroll;
+	}
+}
+
+// only desktop
+@media only screen and (min-width: 775px) {
+	.container {
+		width: 600px;
+	}
+}
+
+// small devices
+@media only screen and (max-width: 775px) {
+	.container {
+		width: 100vw;
+	}
 }
