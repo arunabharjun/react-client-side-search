@@ -49,12 +49,14 @@ const SearchPage = () => {
 	};
 	return (
 		<React.Fragment>
-			<div className='container'>
-				{loading && !error && <h1>loading</h1>}
-				{!loading && error && <h1>error</h1>}
-				{!loading &&
-				!error && <SearchComponent>{data}</SearchComponent>}
-			</div>
+			<main>
+				<div className='container'>
+					{loading && !error && <h1>loading</h1>}
+					{!loading && error && <h1>error</h1>}
+					{!loading &&
+					!error && <SearchComponent>{data}</SearchComponent>}
+				</div>
+			</main>
 		</React.Fragment>
 	);
 };

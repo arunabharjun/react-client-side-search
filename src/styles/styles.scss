@@ -1,8 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 html,
 body {
 	overflow-x: hidden;
-	justify-content: center;
+	background-color: #fafafa;
+}
+
+main {
 	display: flex;
+	justify-content: center;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif !important;
+	scroll-behavior: smooth;
+	color: rgb(44, 44, 44);
 }
 
 .data-card-active {
@@ -10,24 +24,109 @@ body {
 }
 
 .container {
-	padding: 10px;
+	padding: 20px 0;
 }
 
-.search-container {
-	overflow: hidden;
-	outline: none;
-	width: 100%;
-	form {
+.search-wrapper {
+	padding: 0 10px;
+	.search-container {
+		box-shadow: 0 2px 5px 3px rgba(0, 0, 0, 0.05);
+		border-radius: 5px;
+		overflow: hidden;
+		outline: none;
 		width: 100%;
-		input {
+		background-color: #fff;
+		form {
 			width: 100%;
-			outline: none;
+			display: flex;
+			justify-content: space-between;
+			border: solid rgba(0, 0, 0, 0.1);
+			border-width: 0 0 0.5px 0;
+			.search-icon {
+				width: 20px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				svg {
+					position: relative;
+					left: 8px;
+					top: -1px;
+					stroke: rgb(179, 179, 179);
+					stroke-width: 2.5px;
+				}
+			}
+			.close-icon {
+				cursor: pointer;
+				background-color: transparent;
+				border: none;
+				width: 50px;
+				outline: none;
+				svg {
+					position: relative;
+					top: 1px;
+					stroke: rgb(179, 179, 179);
+					stroke-width: 2.5px;
+				}
+			}
+			input {
+				padding: 10px 15px;
+				width: 100%;
+				outline: none;
+				border: none;
+				color: rgb(114, 114, 114);
+				font-weight: 600;
+			}
+		}
+		.results-container {
+			max-height: 300px;
+			overflow-y: scroll;
+			.no-results {
+				text-align: center;
+				color: rgba(114, 114, 114, 0.767);
+				font-weight: 600;
+				margin: 30px 0;
+				font-size: 90%;
+			}
 		}
 	}
-	.results-container {
-		max-height: 300px;
-		overflow-y: scroll;
+}
+
+.data-card {
+	cursor: pointer;
+	padding: 10px;
+	border: solid rgba(0, 0, 0, 0.1);
+	border-width: 0 0 0.5px 0;
+	.card-id {
+		font-weight: 700;
 	}
+	.card-name {
+		font-style: italic;
+		color: rgb(59, 127, 252);
+		font-weight: 600;
+		margin-bottom: 8px;
+	}
+	.card-address {
+		margin-top: 8px;
+		font-size: 90%;
+		color: rgb(114, 114, 114);
+	}
+
+	.card-items {
+		font-size: 80%;
+		font-weight: 600;
+		color: rgb(114, 114, 114);
+		span {
+			color: rgb(114, 114, 114);
+		}
+	}
+}
+
+.result-count {
+	text-align: center;
+	color: rgba(114, 114, 114, 0.6);
+	margin-top: 10px;
+	font-size: 80%;
+	font-weight: 600;
 }
 
 // only desktop
