@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import DataCard from './core/DataCard';
 import { search } from '../helpers/search';
 import { CloseIcon, SearchIcon } from '../assets/Icons';
+import SearchSvg from '../assets/SearchSvg';
 
 const SearchComponent = ({ children }) => {
 	/**
@@ -245,6 +246,21 @@ const SearchComponent = ({ children }) => {
 	};
 
 	/**
+	 * Show empty page svg
+	 */
+	const showSearchSvg = () => {
+		return (
+			<React.Fragment>
+				<div className='svg-box'>
+					<div className='svg-container'>
+						<SearchSvg />
+					</div>
+				</div>
+			</React.Fragment>
+		);
+	};
+
+	/**
 	 * Rendering the complete
 	 * search & results container
 	 */
@@ -264,6 +280,7 @@ const SearchComponent = ({ children }) => {
 							noResults()}
 					</div>
 					{results.res && results.res.length > 0 && showCount()}
+					{query === '' && showSearchSvg()}
 				</div>
 			</React.Fragment>
 		);
