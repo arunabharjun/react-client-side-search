@@ -1,3 +1,5 @@
+[![client-side-search](./public/ScreenShot.png "client-side-search")](https://arunabharjun.com)
+
 ## ▶️ Getting Started
 
 1. Open terminal in your project directory
