@@ -23,7 +23,7 @@ npm instal
 2. Start the react app
 
 ```bash
-npm start
+npm start 
 ```
 
 ## 🖥 Viewing the app
