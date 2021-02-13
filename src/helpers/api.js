@@ -1,20 +1,14 @@
-import { API_KEY, API, API_VERSION } from '../config';
-import axios from 'axios';
+import jsonData from '../assets/data.json';
 
 /**
- * API to get data
+ * This function mocks a promise made
+ * while making an axios api call 
+ * to fetch dat since here the data
+ * is present as a seperate json data file
  */
-
-const api = `${API}/${API_VERSION}/${API_KEY}`;
-
 export const getData = () => {
-	return axios
-		.get(api)
-		.then((data) => {
-			return data;
-		})
-		.catch((error) => {
-			console.log(error);
-			return { error: true };
-		});
+	return new Promise((resolve, reject) => {
+		if (jsonData) resolve({ data: jsonData });
+		reject({ error: true });
+	});
 };

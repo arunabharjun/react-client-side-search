@@ -3,6 +3,7 @@
 # others
 React-client-side-search.code-workspace
 *.code-workspace 
+/src/helpers/realApi.js
 
 # dependencies
 /node_modules

@@ -38,7 +38,7 @@ const SearchPage = () => {
 	 * Utility function to initialise data
 	 */
 	const initData = () => {
-		getData()
+		return getData()
 			.then((data) => {
 				if (!data.error) {
 					setData(data);
