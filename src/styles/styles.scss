@@ -15,6 +15,7 @@
 	--card-shadow: 0 2px 5px 3px rgba(0, 0, 0, 0.05);
 	--navHeight: 56px;
 	--active-card-bg: #fffedc;
+	box-sizing: border-box;
 }
 
 html,
@@ -187,6 +188,7 @@ main {
 }
 
 footer {
+	margin: 0;
 	border-style: solid;
 	border-width: 1px 0 0 0;
 	border-color: var(--card-inner-border);
@@ -195,11 +197,12 @@ footer {
 	width: 100%;
 	bottom: 0;
 	left: 0;
-	margin: 20px 0;
+	height: 56px;
 	font-size: 12px;
 	color: var(--clr-muted-max);
 	font-weight: 800;
 	text-align: center;
+	background-color: var(--bg);
 	a {
 		color: var(--blue);
 	}
@@ -255,5 +258,18 @@ footer {
 			width: 150px;
 			height: auto;
 		}
+	}
+
+	.results-container {
+		max-height: calc(60vh) !important;
+	}
+}
+
+@media only screen and (max-height: 400px) {
+	footer {
+		display: none;
+	}
+	.results-container {
+		max-height: calc(100vh - 125px) !important;
 	}
 }
