@@ -1,3 +1,5 @@
+# Client Side Search
+
 [![client-side-search](./public/ScreenShot.png "client-side-search")](https://arunabharjun.com)
 
 ## ▶️ Getting Started
