@@ -1,7 +1,5 @@
 ## ▶️ Getting Started
 
----
-
 1. Open terminal in your project directory
 
 2. Clone the repo
@@ -11,8 +9,6 @@ git clone https://github.com/arunabharjun/react-client-side-search.git
 ```
 
 ## ⬇️ Installing dependencies
-
----
 
 1. Open terminal in the root directory and run the following command
 
@@ -28,13 +24,9 @@ npm start
 
 ## 🖥 Viewing the app
 
----
-
 The app should have opened in your default browser, but if didn't, visit [http://localhost:3000/](http://localhost:3000/)
 
 ## 🌟 Features
-
----
 
 1. Search users by ID, address, name, items, pincode
 2. Navigate using keyboard up and down arrow keys
